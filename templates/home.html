@@ -10,18 +10,25 @@
         height: 360px;
         width:100%;
         object-fit:cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
     {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="static/banner.jpeg" >
     <div class="container">
       <h1 class="text-center mt-2 mb-4">{{company_name}} Career Website</h1>
-      <img class="img-fluid" id="banner" src="static/banner.jpeg" >
-      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-      <p class="lead">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
+      <div class="row">
+        <div class="col-6">
+          <p class="lead">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+        <div class="col-6">
+          <img src="/static/people.jpeg" style="height:320px;">
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4">Job Openings</h2>
       <div>
         {% for job in jobs %}
@@ -30,7 +37,6 @@
       </div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright , 2025 Jovian</p>
       </div>
     </div>
     {% include 'footer.html' %}
